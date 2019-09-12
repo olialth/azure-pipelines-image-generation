@@ -19,7 +19,7 @@ jobs:
       - task: AzureCLI@1
         displayName: "Create Resource Group"
         inputs:
-          azureSubscription: $(sp-client-subscription-id)
+          azureSubscription: $(arm-subscription-name)
           arguments: --output none
           scriptLocation: inlineScript
           inlineScript: |
