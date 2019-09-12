@@ -3,7 +3,7 @@ jobs:
     condition: always()
     displayName: Run Packer
     pool:
-      vmImage: ubuntu-18.04
+      vmImage: ubuntu-16.04
     steps:
       - checkout: self
         clean: true
@@ -21,9 +21,9 @@ jobs:
         name: RunPacker
         displayName: "Run Ubuntu 18.04 TSS Image Generation"
         env:
-          ARM_SUBSCRIPTION_ID: $(arm-subscription-id)
-          ARM_TENANT_ID: ${arm-tenant-id)
+          ARM_SUBSCRIPTION_ID: $(sp-client-subscription-id)
+          ARM_TENANT_ID: ${sp-client-tenant)
           ARM_IMAGE_RESOURCE_GROUP_NAME: $(arm-image-resource-group-name)
-          ARM_CLIENT_SECRET: $(arm-client-secret)
-          ARM_CLIENT_ID: $(arm-client-id)
+          ARM_CLIENT_SECRET: $(sp-client-secret)
+          ARM_CLIENT_ID: $(sp-client-id)
           ARM_IMAGE_NAME: $(arm-image-name)
