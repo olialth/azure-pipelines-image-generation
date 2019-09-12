@@ -34,3 +34,4 @@ jobs:
           ARM_CLIENT_SECRET: $(sp-client-secret)
           ARM_CLIENT_ID: $(sp-client-id)
           ARM_IMAGE_NAME: $(arm-image-name)
+          ARM_RESOURCE_LOCATION: $(arm-resource-location)
