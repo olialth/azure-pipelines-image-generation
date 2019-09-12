@@ -125,7 +125,6 @@
                 "{{template_dir}}/scripts/installers/docker-moby.sh",
                 "{{template_dir}}/scripts/installers/docker.sh",
                 "{{template_dir}}/scripts/installers/firefox.sh",
-                "{{template_dir}}/scripts/installers/gcc.sh",
                 "{{template_dir}}/scripts/installers/git.sh",
                 "{{template_dir}}/scripts/installers/1604/go.sh",
                 "{{template_dir}}/scripts/installers/google-chrome.sh",
