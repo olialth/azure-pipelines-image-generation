@@ -3,7 +3,7 @@ trigger:
   - feature/add-ci-build-def
 variables:
   - group: image-generation
-  - group: release.ece.dev.secrets
+  - group: image.generation.secrets
 stages:
   - stage: Build
     displayName: Run packer
