@@ -33,7 +33,7 @@ jobs:
           packer --version
       ## Image Gen using packer
       - bash: |
-          packer build images/linux/ubuntu1804-tss-stripped.json
+          packer build images/linux/ubuntu-1804-tss-stripped.json
         name: RunPacker
         displayName: "Run Ubuntu 18.04 TSS Image Generation"
         env:
