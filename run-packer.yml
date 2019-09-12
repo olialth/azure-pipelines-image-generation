@@ -16,6 +16,15 @@ jobs:
           echo "##vso[task.setvariable variable=version;isOutput=true]${build_version}"
         name: buildVersionName
       ## Download & Install Packer
+      - task: AzureCLI@1
+        displayName: "Create Resource Group"
+        inputs:
+          azureSubscription: $(sp-client-subscription-id)
+          arguments: --output none
+          scriptLocation: inlineScript
+          inlineScript: |
+            # Create resource group
+            az group create --location $(arm-resource-location) --name $(arm-image-resource-group-name)
       - bash: |
           export VER="1.4.3"
           wget https://releases.hashicorp.com/packer/${VER}/packer_${VER}_linux_amd64.zip
