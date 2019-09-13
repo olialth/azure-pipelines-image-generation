@@ -2,8 +2,7 @@ jobs:
   - job: Build
     condition: always()
     displayName: Run Packer
-    pool:
-      vmImage: ubuntu-16.04
+    pool: EvAnalytics-Pool
     steps:
       - checkout: self
         clean: true
