@@ -3,6 +3,7 @@ jobs:
     condition: always()
     displayName: Run Packer
     pool: EvAnalytics-Pool
+    timeoutInMinutes: 240
     steps:
       - checkout: self
         clean: true
