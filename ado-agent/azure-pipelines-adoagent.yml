@@ -6,7 +6,6 @@ variables:
   - group: image-generation-secrets
 stages:
   - stage: Build
-    name: builddocker
     displayName: Run Docker Build
     jobs:
       - template: 'run-docker.yml'
