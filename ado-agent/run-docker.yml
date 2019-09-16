@@ -26,7 +26,7 @@ jobs:
         name: DockerBuildAndPush
         inputs:
           command: buildAndPush
-          dockerfile: Dockerfile
+          dockerfile: ado-agent/Dockerfile
           containerRegistry: $(acr.serviceconnection)
           repository: adoagent
           tags: |
