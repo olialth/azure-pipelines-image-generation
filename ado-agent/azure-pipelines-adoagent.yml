@@ -1,0 +1,11 @@
+trigger:
+  - master
+  - feature/add-ci-build-def
+variables:
+  - group: image-generation
+  - group: image-generation-secrets
+stages:
+  - stage: Build
+    displayName: Run packer
+    jobs:
+      - template: 'run-packer.yml'
