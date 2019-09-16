@@ -2,8 +2,9 @@ jobs:
   - job: Build
     condition: always()
     displayName: Run Docker
-    pool: EvAnalytics-Pool
-    timeoutInMinutes: 240
+    pool:
+      vmImage: ubuntu-16.04
+    timeoutInMinutes: 60
     steps:
       - checkout: self
         clean: true
