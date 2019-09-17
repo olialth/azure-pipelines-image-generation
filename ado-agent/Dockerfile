@@ -20,6 +20,14 @@ RUN apt-get update \
 # Instsall OpenJDK 8
 RUN apt-get install openjdk-8-jdk
 
+# Remove old versions and install new version of docker
+
+RUN apt-get remove docker docker-engine docker.io
+RUN apt install docker.io
+RUN systemctl start docker
+RUN systemctl enable docker
+RUN docker --version
+
 WORKDIR /azp
 
 COPY ./start.sh .
