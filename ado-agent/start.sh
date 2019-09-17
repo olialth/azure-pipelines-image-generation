@@ -73,10 +73,13 @@ source ./env.sh
 trap 'cleanup; exit 130' INT
 trap 'cleanup; exit 143' TERM
 
-print_header "3. Configuring Azure Pipelines agent..."
+print_header "Preparing Java 8"
+ln -s /usr/lib/jvm/java-8-openjdk-amd64/ /usr/lib/jvm/default-java
+echo "export JAVA_HOME_8_X64=/usr/lib/jvm/java-8-openjdk-amd64" >> /home/$5/.bashrc
+echo "JAVA_HOME_8_X64=/usr/lib/jvm/java-8-openjdk-amd64" >> .env
+export JAVA_HOME_8_X64=/usr/lib/jvm/java-8-openjdk-amd64
 
-export JAVA_HOME=/usr/bin/javac
-java -version
+print_header "3. Configuring Azure Pipelines agent..."
 
 ./config.sh --unattended \
   --agent "${AZP_AGENT_NAME:-$(hostname)}" \
