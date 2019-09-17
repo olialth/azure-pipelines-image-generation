@@ -24,8 +24,6 @@ RUN apt-get install openjdk-8-jdk
 
 RUN apt-get remove docker docker-engine docker.io
 RUN apt install docker.io
-RUN sudo systemctl start docker
-RUN sudo systemctl enable docker
 RUN docker --version
 
 WORKDIR /azp
