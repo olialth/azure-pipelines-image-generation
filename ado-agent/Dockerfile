@@ -19,6 +19,7 @@ RUN apt-get update \
 
 # Instsall OpenJDK 8
 RUN apt-get install openjdk-8-jdk
+RUN java -version
 
 # Remove old versions and install new version of docker
 
