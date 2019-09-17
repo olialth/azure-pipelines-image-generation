@@ -26,6 +26,7 @@ RUN java -version
 RUN apt-get remove docker docker-engine docker.io
 RUN apt install docker.io
 RUN docker --version
+RUN service docker start
 
 WORKDIR /azp
 
